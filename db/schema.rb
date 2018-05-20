@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_18_200047) do
+ActiveRecord::Schema.define(version: 2018_05_20_192233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "neighborhoods", force: :cascade do |t|
+    t.string "neighborhood"
+    t.string "zip_code", array: true
+  end
 
   create_table "places", force: :cascade do |t|
     t.string "name"
@@ -21,7 +26,7 @@ ActiveRecord::Schema.define(version: 2018_05_18_200047) do
     t.text "cross_street"
     t.string "city"
     t.string "state"
-    t.integer "zipcode"
+    t.string "zip_code"
     t.text "formatted_address"
     t.text "image_url"
     t.string "foursquare_id"
