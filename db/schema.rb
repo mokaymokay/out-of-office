@@ -17,8 +17,16 @@ ActiveRecord::Schema.define(version: 2018_05_18_200047) do
 
   create_table "places", force: :cascade do |t|
     t.string "name"
-    t.text "address"
+    t.text "street_address"
+    t.text "cross_street"
+    t.string "city"
+    t.string "state"
     t.integer "zipcode"
+    t.text "formatted_address"
+    t.text "image_url"
+    t.string "foursquare_id"
+    t.string "category"
+    t.string "weather_category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
