@@ -6,7 +6,7 @@ class CreatePlaces < ActiveRecord::Migration[5.2]
       t.text :cross_street
       t.string :city
       t.string :state
-      t.integer :zipcode
+      t.string :zip_code
       t.text :formatted_address
       t.text :image_url
       t.string :foursquare_id
