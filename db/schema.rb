@@ -10,15 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_18_200047) do
+ActiveRecord::Schema.define(version: 2018_05_20_203303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "advices", force: :cascade do |t|
+    t.text "advice"
+    t.string "category"
+  end
+
+  create_table "neighborhoods", force: :cascade do |t|
+    t.string "neighborhood"
+    t.string "zip_code", array: true
+  end
+
   create_table "places", force: :cascade do |t|
     t.string "name"
-    t.text "address"
-    t.integer "zipcode"
+    t.text "street_address"
+    t.text "cross_street"
+    t.string "city"
+    t.string "state"
+    t.string "zip_code"
+    t.text "formatted_address"
+    t.text "image_url"
+    t.string "foursquare_id"
+    t.string "category"
+    t.string "weather_category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

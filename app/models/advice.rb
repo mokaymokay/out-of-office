@@ -1,0 +1,3 @@
+class Advice < ApplicationRecord
+
+end
