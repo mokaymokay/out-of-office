@@ -12,6 +12,8 @@ class CreatePlaces < ActiveRecord::Migration[5.2]
       t.string :foursquare_id
       t.string :category
       t.string :weather_category
+      t.belongs_to :neighborhood, index: true
+      t.integer :neighborhood_id
 
       t.timestamps
     end
