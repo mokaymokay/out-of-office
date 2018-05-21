@@ -37,8 +37,10 @@ ActiveRecord::Schema.define(version: 2018_05_20_203303) do
     t.string "foursquare_id"
     t.string "category"
     t.string "weather_category"
+    t.integer "neighborhood_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["neighborhood_id"], name: "index_places_on_neighborhood_id"
   end
 
 end
