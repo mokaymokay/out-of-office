@@ -1,5 +1,11 @@
 class PlacesController < ApplicationController
 
+  def index
+   
+
+  end
+
+
   def seed_lists
     # get JSON
     # NOTE: uncomment below only when seeding
@@ -41,6 +47,8 @@ class PlacesController < ApplicationController
         weather_category: weather_category
       )
     end
+
   end
 
 end
+
