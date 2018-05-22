@@ -1,5 +1,11 @@
 class PlacesController < ApplicationController
 
+  def index
+   
+
+  end
+
+
   def seed
     # get JSON
     outdoor_access = JSON.parse(HTTParty.get("https://api.foursquare.com/v2/lists/5afeea15ea1e447791b625ce?client_id=#{ENV['FOURSQUARE_CLIENT_ID']}&client_secret=#{ENV['FOURSQUARE_CLIENT_SECRET']}&v=20180323").body)
@@ -55,5 +61,8 @@ class PlacesController < ApplicationController
       )
     end
 
+    
+
   end
 end
+
