@@ -1,10 +1,12 @@
 class PlacesController < ApplicationController
 
   def index
-   
-
+    @places = Place.where(zip_code: "10038")
   end
 
+  def show
+    @place = Place.find(params[:id])
+  end
 
   def seed_lists
     # get JSON
@@ -51,4 +53,3 @@ class PlacesController < ApplicationController
   end
 
 end
-
