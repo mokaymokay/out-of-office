@@ -1,16 +1,5 @@
-<% ("Places Page") %>
-<h1>Google Maps</h1>
-<div id="map-container">
-  <div id="map">
-  </div>
-</div>
+  <%= render "shared/weather" %>
+  <%= render "shared/boxes" %>
 
-<div id="gallery">
-  <section>
-    <% @places.each do |p| %>
-      <a href="places/<%= p.id %>" data-poptrox="ajax,600x400"><img src="http://placehold.it/100/07f/fff.png&amp;text=ajax" alt="" title="<%= p.name %>"/></a>
-    <% end %>
-  </section>
-</div>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_API_KEY']%>&callback=initMap"></script>
+
