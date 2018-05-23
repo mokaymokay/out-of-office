@@ -1,29 +1,27 @@
++<%= stylesheet_link_tag 'boxes' %>
 
-
-<%= stylesheet_link_tag 'boxes' %>
-
-
-<script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_API_KEY']%>&callback=initMap"></script>
-
-<div class="cols">
-	 <% @places.each do |p| %>
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
-				<div class="container">
-				<a href="places/<%= p.id %>">	<div class="front" style="background-image: url(<%= asset_path (p.image_url) %>)">
-						<div class="inner">
-							<p><%= p.name %></p>
-              <span><%= p.category %></span>
+<div id="gallery">
+	<div class="wrapper">
+		<div class="cols">
+			 <% @places.each do |p| %>
+					<div class="col" ontouchstart="this.classList.toggle('hover');">
+						<div class="container">
+						<a href="places/<%= p.id %>">	<div class="front" style="background-image: url(<%= asset_path (p.image_url) %>)">
+								<div class="inner">
+									<h1><%= p.name %></h1>
+		              <span><h2><%= p.category %><h2></span>
+								</div>
 						</div>
-				</div>
-				
-				<div class="back">
-					<div class="inner">
-						<p><%= p.formatted_address %></p>
+
+						<div class="back">
+							<div class="inner">
+								<p><%= p.formatted_address %></p>
+							</div>
+						</div>
+						</a>
 					</div>
 				</div>
-				</a>
-			</div>
+			<% end %>
 		</div>
-	<% end %>
+	</div>
 </div>
-

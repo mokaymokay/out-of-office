@@ -1,15 +1,26 @@
-* {
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One|Montserrat');
+
+#gallery {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-h1 {
-    font-size: 2.5rem;
+#gallery h1 {
+    font-size: 2rem;
+    font-family: 'Hammersmith One';
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#gallery h2 {
+    font-size: 1rem;
     font-family: 'Montserrat';
     font-weight: normal;
-    color: #444;
+    color: lightgray;
     text-align: center;
     margin: 2rem 0;
 }
@@ -64,10 +75,10 @@ h1 {
 }
 
 .back {
-    background: #cedce7;
-    background: -webkit-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
-    background: -o-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
-    background: linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+    background: #080B0E;
+    background: -webkit-linear-gradient(45deg, #262626 0%, #141414 100%);
+    background: -o-linear-gradient(45deg, #262626 0%, #141414 100%);
+    background: linear-gradient(45deg, #262626 0%, #141414 100%);
 }
 
 .front:after {
@@ -79,7 +90,7 @@ h1 {
     height: 100%;
     content: '';
     display: block;
-    opacity: .6;
+    opacity: .35;
     background-color: #000;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
