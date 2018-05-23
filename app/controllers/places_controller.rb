@@ -1,7 +1,7 @@
 class PlacesController < ApplicationController
 
   def index
-    @places = Place.where(zip_code: "10038")
+    @places = Place.where(zip_code: "10012")
   end
 
   def show
