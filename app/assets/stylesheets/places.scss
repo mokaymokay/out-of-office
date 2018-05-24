@@ -2,17 +2,44 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One|Montserrat');
 @import "colors";
 
 body {
-    margin: 0;
-    padding: 0;
-    background: $darksky;
+  margin: 0;
+  padding: 0;
+  background: $darksky;
 }
 
 body p {
   font-family: 'Montserrat';
 }
+
+#individual-venue h1 {
+  font-family: 'Hammersmith One', sans-serif;
+  margin-bottom: 1.375em;
+  color: #fff;
+  font-weight: 100;
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.venue {
+  width: 50%;
+  height: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+p,
+a {
+  color: $platinum;
+  font-size: small;
+  text-align: center;
+}
+
+p { margin: 1.375rem 0; }
 
 .ooo-logo {
     display: block;
@@ -33,3 +60,5 @@ body p {
     height: 384px;
     width: 90%;
 }
+
+//
