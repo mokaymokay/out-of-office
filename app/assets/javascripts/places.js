@@ -2,6 +2,7 @@
  var map, infoWindow;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
+
           center: {
             lat: 40.7079748,
             lng: -74.006553
@@ -26,9 +27,7 @@
               }
               
             );
-          
-            
-            
+
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             infoWindow.open(map);
@@ -49,4 +48,3 @@
         infoWindow.open(map);
       }
 
-      // NOTE: Geocoder 's default IP address lookup has changed from FreeGeoIP.net to IPInfo.io. If you explicitly specify :freegeoip in your configuration you must choose a different IP lookup before FreeGeoIP is discontinued on July 1, 2018. If you do not explicitly specify :freegeoip you do not need to change anything.
