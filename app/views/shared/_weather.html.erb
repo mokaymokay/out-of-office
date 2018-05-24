@@ -1,4 +1,15 @@
 <%= stylesheet_link_tag 'weather' %>
+ <h1>Current weather: <%= @weather["main"]["temp"] %></h1>
+ 
+<% case @weather["weather"][0]["description"] %>
+<% when "clear sky"  %>
+<div class="icon sunny">
+  <div class="sun">
+    <div class="rays"></div>
+  </div>
+</div>
+
+<% when "few clouds"  %>
 
 <div class="icon sun-shower">
   <div class="cloud"></div>
@@ -7,6 +18,7 @@
   </div>
   <div class="rain"></div>
 </div>
+<% when "thunderstorm"  %>
 
 <div class="icon thunder-storm">
   <div class="cloud"></div>
@@ -16,10 +28,14 @@
   </div>
 </div>
 
+<% when "scattered clouds", "broken clouds"  %>
+
 <div class="icon cloudy">
   <div class="cloud"></div>
   <div class="cloud"></div>
 </div>
+
+<% when "snow"  %>
 
 <div class="icon flurries">
   <div class="cloud"></div>
@@ -29,13 +45,15 @@
   </div>
 </div>
 
-<div class="icon sunny">
-  <div class="sun">
-    <div class="rays"></div>
-  </div>
-</div>
+<% when "shower rain", "rain", "mist"   %>
 
 <div class="icon rainy">
   <div class="cloud"></div>
   <div class="rain"></div>
 </div>
+
+<% else %>
+
+<h1>Snow happens, weather you like it or not</h1>
+
+<% end %>

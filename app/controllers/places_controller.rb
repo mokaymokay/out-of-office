@@ -1,7 +1,6 @@
 class PlacesController < ApplicationController
 
   def index
-    @places = Place.where(zip_code: "10012")
   end
 
   def create
@@ -9,6 +8,8 @@ class PlacesController < ApplicationController
     puts @zip_code
     weather_object = Weather.new(@zip_code)
     @weather = weather_object.get_weather()
+    puts @weather["weather"][0]["description"]
+    @places = Place.where(neighborhood_id: Neighborhood.where("'#{@zip_code}' = ANY (neighborhoods.zip_code)")[0].id)
   end
 
   def show
