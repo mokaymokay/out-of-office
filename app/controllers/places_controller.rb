@@ -2,9 +2,13 @@ class PlacesController < ApplicationController
 
  
   def index
+<<<<<<< HEAD
+    @places = Place.where(zip_code: "10012")
+=======
 
     @places = Place.where(zip_code: "10012")
 
+>>>>>>> master
   end
 
   def show

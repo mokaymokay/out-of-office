@@ -17,7 +17,7 @@
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
-            
+
             new google.maps.Geocoder().geocode({
                 'latLng': pos
               },
@@ -25,7 +25,7 @@
                 var zip = res[0].formatted_address.match(/,\s\w{2}\s(\d{5})/);
               console.log(zip[0,1]);
               }
-              
+
             );
 
             infoWindow.setPosition(pos);
@@ -47,4 +47,3 @@
                               'Error: Your browser does not support geolocation.');
         infoWindow.open(map);
       }
-
