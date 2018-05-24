@@ -1,4 +1,4 @@
-var map, infoWindow;
+var map, infoWindow, zip_code;
     function initMap() {
       map = new google.maps.Map(document.getElementById('map'), {
 
@@ -22,7 +22,10 @@ var map, infoWindow;
             },
             function (res, status) {
               var zip = res[0].formatted_address.match(/,\s\w{2}\s(\d{5})/);
-            console.log(zip[0,1]);
+              if (zip) {
+                console.log(zip[1]);
+                getZipCode(zip[1]);
+              }
             }
 
           );
@@ -46,3 +49,8 @@ var map, infoWindow;
                             'Error: Your browser does not support geolocation.');
       infoWindow.open(map);
     }
+
+function getZipCode(zipCode) {
+  // set form val to above variable
+  $('#user_zip_code').val(zipCode);
+}
