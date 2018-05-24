@@ -1,7 +1,12 @@
+
  var map, infoWindow;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
+
+          center: {
+            lat: 40.7079748,
+            lng: -74.006553
+          },
           zoom: 15
         });
         infoWindow = new google.maps.InfoWindow;
@@ -12,6 +17,16 @@
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
+
+            new google.maps.Geocoder().geocode({
+                'latLng': pos
+              },
+              function (res, status) {
+                var zip = res[0].formatted_address.match(/,\s\w{2}\s(\d{5})/);
+              console.log(zip[0,1]);
+              }
+
+            );
 
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
