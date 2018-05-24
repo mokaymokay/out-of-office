@@ -1,9 +1,13 @@
 class PlacesController < ApplicationController
 
+ 
   def index
    
-
   end
+
+
+  
+
 
 
   def seed_lists
