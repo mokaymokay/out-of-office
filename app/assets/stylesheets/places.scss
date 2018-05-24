@@ -24,16 +24,12 @@ body p {
 // google maps
 
 #map-container {
-    height: 400px;
-    border-radius: 16px 16px;
-    border-color: #fff;
-    border-style: solid;
-    box-shadow: 2px 2px 10px #b1b1b1;
-    margin-top: 25px;
-    border-width: 7px;
+    margin: 25px;
 }
 
 #map {
+    display: block;
+    margin: 0 auto;
     height: 384px;
-    width: 100%;
+    width: 90%;
 }

@@ -15,15 +15,17 @@
     color: white;
     text-align: center;
     margin: 2rem 0;
+    text-shadow: 2px 2px 2px $gunmetal;
 }
 
 #gallery h2 {
     font-size: 1rem;
     font-family: 'Montserrat';
     font-weight: normal;
-    color: lightgray;
+    color: $platinum;
     text-align: center;
     margin: 2rem 0;
+    text-shadow: 1px 1px 1px $gunmetal;
 }
 
 .wrapper {
@@ -56,6 +58,11 @@
     perspective: 1000px;
 }
 
+.box-icon {
+  width: 2em;
+  height: 2em;
+}
+
 .front,
 .back {
     background-size: cover;
@@ -76,10 +83,7 @@
 }
 
 .back {
-    background: $darksky;
-    background: -webkit-linear-gradient(45deg, #262626 0%, #141414 100%);
-    background: -o-linear-gradient(45deg, #262626 0%, #141414 100%);
-    background: linear-gradient(45deg, #262626 0%, #141414 100%);
+    background: $sun;
 }
 
 .front:after {
@@ -112,6 +116,8 @@
     top: 0;
     left: 0;
     width: 100%;
+} p {
+  color: $darksky;
 }
 
 .inner {
