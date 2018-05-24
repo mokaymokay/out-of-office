@@ -2,10 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "colors";
+
 body {
     margin: 0;
     padding: 0;
-    background: #080B0E;
+    background: $darksky;
 }
 
 body p {
