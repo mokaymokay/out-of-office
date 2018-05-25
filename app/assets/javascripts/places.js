@@ -1,56 +1,57 @@
 var map, infoWindow, zip_code;
-    function initMap() {
-      map = new google.maps.Map(document.getElementById('map'), {
+
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
 
         center: {
-          lat: 40.7079748,
-          lng: -74.006553
+            lat: 40.785091,
+            lng: -73.968285
         },
         zoom: 15
-      });
-      infoWindow = new google.maps.InfoWindow;
+    });
+    infoWindow = new google.maps.InfoWindow;
 
-      if (navigator.geolocation) {
+    if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
-          var pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          };
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
 
-          new google.maps.Geocoder().geocode({
-              'latLng': pos
-            },
-            function (res, status) {
-              var zip = res[0].formatted_address.match(/,\s\w{2}\s(\d{5})/);
-              if (zip) {
-                console.log(zip[1]);
-                getZipCode(zip[1]);
-              }
-            }
+            new google.maps.Geocoder().geocode({
+                    'latLng': pos
+                },
+                function(res, status) {
+                    var zip = res[0].formatted_address.match(/,\s\w{2}\s(\d{5})/);
+                    if (zip) {
+                        console.log(zip[1]);
+                        getZipCode(zip[1]);
+                    }
+                }
 
-          );
+            );
 
-          infoWindow.setPosition(pos);
-          infoWindow.setContent('Location found.');
-          infoWindow.open(map);
-          map.setCenter(pos);
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
         }, function() {
-          handleLocationError(true, infoWindow, map.getCenter());
+            handleLocationError(true, infoWindow, map.getCenter());
         });
-      } else {
+    } else {
         handleLocationError(false, infoWindow, map.getCenter());
-      }
     }
+}
 
-    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-      infoWindow.setPosition(pos);
-      infoWindow.setContent(browserHasGeolocation ?
-                            'Error: The Geolocation service failed.' :
-                            'Error: Your browser does not support geolocation.');
-      infoWindow.open(map);
-    }
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+        'Error: The Geolocation service failed.' :
+        'Error: Your browser does not support geolocation.');
+    infoWindow.open(map);
+}
 
 function getZipCode(zipCode) {
-  // set form val to above variable
-  $('#user_zip_code').val(zipCode);
+    // set form val to above variable
+    $('#user_zip_code').val(zipCode);
 }
