@@ -9,7 +9,8 @@ class PlacesController < ApplicationController
     weather_object = Weather.new(@zip_code)
     @weather = weather_object.get_weather()
     puts @weather["weather"][0]["description"]
-    @places = Place.where(neighborhood_id: Neighborhood.where("'#{@zip_code}' = ANY (neighborhoods.zip_code)")[0].id)
+    @places = Neighborhood.find_by("'#{@zip_code}' = ANY (neighborhoods.zip_code)").places
+    @neighborhood = params[:user][:neighborhood]
     current_temp = @weather["main"]["temp"]
     if current_temp > 80
       temp_feels = "outdoor"
@@ -59,6 +60,8 @@ class PlacesController < ApplicationController
         city: data['venue']['location']['city'],
         state: data['venue']['location']['state'],
         zip_code: data['venue']['location']['postalCode'],
+        lat: data['venue']['location']['lat'],
+        lng: data['venue']['location']['lng'],
         formatted_address: data['venue']['location']['formattedAddress'],
         image_url: data['photo']['prefix'] + data['photo']['width'].to_s + "x" + data['photo']['height'].to_s + data['photo']['suffix'],
         foursquare_id: data['venue']['id'],
