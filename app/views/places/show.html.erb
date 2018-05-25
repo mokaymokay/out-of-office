@@ -4,6 +4,30 @@
     <p><%= @place.street_address %></p>
     <p><%= @place.cross_street %></p>
     <p><%= @place.city %>, <%= @place.state %> <%= @place.zip_code %></p>
+
+    <div id="map-container">
+      <div id="venue-map"></div>
+    </div>
+
     <%= image_tag(@place.image_url, class: "venue", alt: "@place.name") %>
   </div>
 </div>
+
+<script>
+  var map;
+  function initMap() {
+    var venue = {lat: <%= @place.lat %>, lng: <%= @place.lng %>};
+    // The map, centered at venue
+    var map = new google.maps.Map(
+        document.getElementById('venue-map'), {zoom: 18, center: venue});
+    // The marker, positioned at venue
+    var marker = new google.maps.Marker({
+      position: venue,
+      map: map
+    });
+  }
+</script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_API_KEY']%>&callback=initMap"
+async defer></script>

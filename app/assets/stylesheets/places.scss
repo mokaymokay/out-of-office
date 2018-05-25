@@ -13,6 +13,7 @@ body {
 
 body p {
   font-family: 'Montserrat';
+  margin: 0.5em 0;
 }
 
 .form_area {
@@ -51,11 +52,17 @@ body p {
   text-align: center;
 }
 
+#individual-venue {
+  margin-bottom: 5%;
+}
+
 .venue {
   width: 50%;
-  height: 50%;
   display: block;
   margin: 0 auto;
+  @media screen and (max-width: 600px) {
+    width: 90%;
+  }
 }
 
 p,
@@ -87,4 +94,12 @@ p { margin: 1.375rem 0; }
     width: 90%;
 }
 
-//
+#venue-map {
+    display: block;
+    margin: 0 auto;
+    height: 384px;
+    width: 51.75%;
+    @media screen and (max-width: 600px) {
+      width: 90%;
+    }
+}
