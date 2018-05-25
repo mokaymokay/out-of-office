@@ -1,4 +1,6 @@
-<div  class="container">
+<%= link_to 'Back', 'javascript:history.back()', class: "btn back_button" %>
+
+<div class="container">
   <div id="individual-venue">
     <h1><%= @place.name %></h1>
     <p><%= @place.street_address %></p>
@@ -19,7 +21,7 @@
     var venue = {lat: <%= @place.lat %>, lng: <%= @place.lng %>};
     // The map, centered at venue
     var map = new google.maps.Map(
-        document.getElementById('venue-map'), {zoom: 18, center: venue});
+        document.getElementById('venue-map'), {zoom: 16, center: venue});
     // The marker, positioned at venue
     var marker = new google.maps.Marker({
       position: venue,
@@ -27,7 +29,6 @@
     });
   }
 </script>
-
 
 <script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_API_KEY']%>&callback=initMap"
 async defer></script>

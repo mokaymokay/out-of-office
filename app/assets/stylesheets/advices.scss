@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One|Montserrat');
+@import "colors";
+.advice {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.advice h1 {
+    color: $sun;
+}
+
+.advice h3 {
+    color: $platinum;
+    font-family: Montserrat;
+}
