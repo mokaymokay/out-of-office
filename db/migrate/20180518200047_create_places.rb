@@ -1,5 +1,5 @@
 class CreatePlaces < ActiveRecord::Migration[5.2]
-  def change
+  def up
     create_table :places do |t|
       t.string :name
       t.text :street_address
@@ -17,5 +17,9 @@ class CreatePlaces < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+  end
+
+  def down
+    drop_table :places
   end
 end
