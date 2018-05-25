@@ -1,11 +1,10 @@
-var map, infoWindow, zip_code;
+var map, infoWindow;
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-
         center: {
-            lat: 40.785091,
-            lng: -73.968285
+            lat: 40.782427,
+            lng: -73.9759587
         },
         zoom: 15
     });
@@ -19,20 +18,19 @@ function initMap() {
             };
 
             new google.maps.Geocoder().geocode({
-                    'latLng': pos
-                },
+                'latLng': pos
+            },
                 function(res, status) {
-                    var zip = res[0].formatted_address.match(/,\s\w{2}\s(\d{5})/);
-                    if (zip) {
-                        console.log(zip[1]);
-                        getZipCode(zip[1]);
+                    if (status == 'OK') {
+                        console.log(res);
+                        let zip = res[0].formatted_address.match(/,\s\w{2}\s(\d{5})/);
+                        let neighborhood = res[2].address_components[0]['short_name'];
+                        getZipCodeAndNeighborhood(zip[1], neighborhood);
                     }
                 }
-
             );
-
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
+            infoWindow.setContent('Are you here?');
             infoWindow.open(map);
             map.setCenter(pos);
         }, function() {
@@ -51,7 +49,8 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.open(map);
 }
 
-function getZipCode(zipCode) {
-    // set form val to above variable
+function getZipCodeAndNeighborhood(zipCode, neighborhood) {
+    // set form values in hidden form
     $('#user_zip_code').val(zipCode);
+    $('#user_neighborhood').val(neighborhood);
 }

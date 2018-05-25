@@ -10,6 +10,7 @@ class PlacesController < ApplicationController
     @weather = weather_object.get_weather()
     puts @weather["weather"][0]["description"]
     @places = Place.where(neighborhood_id: Neighborhood.where("'#{@zip_code}' = ANY (neighborhoods.zip_code)")[0].id)
+    @neighborhood = params[:user][:neighborhood]
   end
 
   def show

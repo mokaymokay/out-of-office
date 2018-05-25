@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag 'weather' %>
  <h1>Current weather: <%= @weather["main"]["temp"] %></h1>
- 
+ <h2><%= @neighborhood %></h2>
 <% case @weather["weather"][0]["description"] %>
 <% when "clear sky"  %>
 <div class="icon sunny">

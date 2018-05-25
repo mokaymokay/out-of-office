@@ -4,7 +4,12 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_API_KEY']%>&callback=initMap"></script>
 
-<%= form_for :user, url: url_for(controller: 'places', action: 'create') do |f| %>
-  <%= f.hidden_field :zip_code %>
-  <%= f.submit "Confirm location" %>
-<% end %>
+<div class="form_area">
+  <div id="confirm_location_form">
+    <%= form_for :user, url: url_for(controller: 'places', action: 'create') do |f| %>
+      <%= f.hidden_field :zip_code %>
+      <%= f.hidden_field :neighborhood %>
+      <%= f.submit "Confirm location", class: "confirm_location_button" %>
+    <% end %>
+  </div>
+</div>
