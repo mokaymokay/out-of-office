@@ -1,5 +1,7 @@
 <%= stylesheet_link_tag 'weather' %>
- <h1>Current weather: <%= @weather["main"]["temp"] %></h1>
+ <h1>Current weather: <%= @weather["main"]["temp"].round %>&#176</h1>
+  <h1>Today: <%= @weather["main"]["temp_min"].round %>&#176/<%= @weather["main"]["temp_max"].round%>&#176</h1>
+
  
 <% case @weather["weather"][0]["description"] %>
 <% when "clear sky"  %>
