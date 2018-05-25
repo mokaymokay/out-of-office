@@ -10,6 +10,18 @@ class PlacesController < ApplicationController
     @weather = weather_object.get_weather()
     puts @weather["weather"][0]["description"]
     @places = Place.where(neighborhood_id: Neighborhood.where("'#{@zip_code}' = ANY (neighborhoods.zip_code)")[0].id)
+    current_temp = @weather["main"]["temp"]
+    if current_temp > 80
+      temp_feels = "outdoor"
+    elsif current_temp < 60
+      temp_feels = "cold"
+    else
+      temp_feels = "warm"
+    end
+    non_clothing_advices = Advice.where({category: "non-clothing", weather_category: temp_feels})
+    @non_clothing_advice = non_clothing_advices[rand(non_clothing_advices.length)]
+    clothing_advices = Advice.where({category: "clothing", weather_category: temp_feels})
+    @clothing_advice = clothing_advices[rand(clothing_advices.length)]
   end
 
   def show
