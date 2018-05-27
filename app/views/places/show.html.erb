@@ -1,8 +1,6 @@
-<%= link_to 'Back', 'javascript:history.back()', class: "btn back_button" %>
-
 <div class="container">
   <div id="individual-venue">
-    <h1><%= @place.name %></h1>
+    <h1><a href="https://foursquare.com/v/<%= @place.foursquare_id %>" target="_blank" class="venue-link"><%= @place.name %></a></h1>
     <p><%= @place.street_address %></p>
     <p><%= @place.cross_street %></p>
     <p><%= @place.city %>, <%= @place.state %> <%= @place.zip_code %></p>
@@ -12,6 +10,7 @@
     </div>
 
     <%= image_tag(@place.image_url, class: "venue", alt: "@place.name") %>
+    <%= link_to 'Back', 'javascript:history.back()', class: "btn back_button" %>
   </div>
 </div>
 

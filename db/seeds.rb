@@ -41,7 +41,6 @@ Neighborhood.create(neighborhood: 'South Shore', zip_code: [10306, 10307, 10308,
 Neighborhood.create(neighborhood: 'Stapleton and St. George', zip_code: [10301, 10304, 10305])
 Neighborhood.create(neighborhood: 'Mid-Island', zip_code: [10314])
 
-
 Advice.create(advice: "It's a smile, it's a kiss, it's a sip of wine... it's summertime!", category: "non-clothing", weather_category: 'warm')
 Advice.create(advice: "In summer, the song sings itself.", category: "non-clothing", weather_category: 'warm')
 Advice.create(advice: "Cause a little bit of summer is what the whole year is all about.", category: "non-clothing", weather_category: 'warm')
@@ -69,8 +68,6 @@ Advice.create(advice: "Summer is delicious!", category: "non-clothing", weather_
 Advice.create(advice: "Who has not dreamed of a world of bliss on a bright, sunny noon like this?", category: "non-clothing", weather_category: 'warm')
 Advice.create(advice: "You can never appreciate the shade of a tree unless you sweat in the sun.", category: "non-clothing", weather_category: 'warm')
 Advice.create(advice: "If it could only be like this always – always summer, always alone, the fruit always ripe and Aloysius in a good temper...", category: "non-clothing", weather_category: 'warm')
-Advice.create(advice: "I wish we could just fast forward to summer.", category: "non-clothing", weather_category: 'cold')
-Advice.create(advice: "Summer should get a speeding ticket.", category: "non-clothing", weather_category: 'cold')
 Advice.create(advice: "Where the heck did summer go?", category: "non-clothing", weather_category: 'cold')
 Advice.create(advice: "So can we just skip to summer now??", category: "non-clothing", weather_category: 'cold')
 Advice.create(advice: "Summer, please restart yourself.", category: "non-clothing", weather_category: 'cold')
@@ -120,7 +117,11 @@ Advice.create(advice: "Do you know Chuck, Jordan or Adidas? Your feet would love
 Advice.create(advice: "Winter boots will keep your toes cozy today.", category: "clothing", weather_category: 'cold')
 Advice.create(advice: "Hats are for cool people, be cool today in your hat.", category: "clothing", weather_category:'cold')
 Advice.create(advice: "A coat by any other name would smell as sweet.", category: "clothing", weather_category: 'cold')
-Advice.create(advice: "Jeans are a wardrobe staple and a good choice for today.", category: "clothing", weather_category: 'cold')
-Advice.create(advice: "A scarf is a good idea. It is going to be a windy day.", category: "clothing", weather_category: 'cold')
+Advice.create(advice: "A scarf is a good idea to keep you warm and cozy.", category: "clothing", weather_category: 'cold')
 Advice.create(advice: "Winter is here, a parka is a good idea.", category: "clothing", weather_category:'cold')
 Advice.create(advice: "Thermals are a must today if you are going outside.", category: "clothing", weather_category:'cold')
+
+# Meh
+Advice.create(advice: "Jeans are a wardrobe staple and a good choice for today.", category: "clothing", weather_category: 'meh')
+Advice.create(advice: "I wish we could just fast forward to summer.", category: "non-clothing", weather_category: 'meh')
+Advice.create(advice: "Summer should get a speeding ticket.", category: "non-clothing", weather_category: 'meh')
