@@ -16,16 +16,6 @@ Every time a user go into the website he needs to allow the use of location and 
 ## Future
 While the app currently covers the 5 boroughs of NYC, in the future we want to expand and be available to more cities and countries. in addition, we believe the 'whole package' contain a display of clothing suggestions images and/or retails where our users can actually buy the right clothing for their weather and location conditions.   
 
-## Built With
-
-* [Google Maps API](https://cloud.google.com/maps-platform/)
-* [Foursquare API](https://developer.foursquare.com/)
-* [OPenWeather API](https://www.openweathermap.org/api)
-* [Animated Weather Icons](https://codepen.io/joshbader/pen/EjXgqr)
-* [Half Fuller Buttons](https://codepen.io/half-fuller/pen/GJwVLP)
-* [Parallax Flipping Cards](https://codepen.io/tyrellrummage/full/wqGgLO/)
-
-
 ## Deployment
 
 The app deployed using Heroko:
@@ -41,3 +31,8 @@ The app deployed using Heroko:
 ## Screenshots 
 
 ![screen shot 2018-05-27 at 12 41 50 pm](https://user-images.githubusercontent.com/18123962/40588450-5d6de8a0-61ab-11e8-8363-a92940746f69.png)
+
+
+## Acknowledgements
+
+* Credits: [Google Maps API](https://cloud.google.com/maps-platform/), [Foursquare API](https://developer.foursquare.com/), [OPenWeather API](https://www.openweathermap.org/api), [Animated Weather Icons](https://codepen.io/joshbader/pen/EjXgqr), [Half Fuller Buttons](https://codepen.io/half-fuller/pen/GJwVLP), [Parallax Flipping Cards](https://codepen.io/tyrellrummage/full/wqGgLO/)
