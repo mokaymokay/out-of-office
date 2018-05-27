@@ -1,3 +1,6 @@
+![alt tag](https://files.slack.com/files-pri/T03JJLPSP-FAVSR8L0Y/image.png "Description goes here")
+
+
 Out Of Office
 ======================
 Out Of Office is an who assist users to find their ideal venue to work outside based on weather and their location.
