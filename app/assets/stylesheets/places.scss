@@ -44,7 +44,7 @@ body p {
 
 #individual-venue h1 {
   font-family: 'Hammersmith One', sans-serif;
-  margin: 1.375em 0;
+  margin: 0.8em 0 0.5em 0;
   color: #fff;
   font-weight: 100;
   font-size: 2em;
@@ -52,16 +52,25 @@ body p {
   text-align: center;
 }
 
+.venue-link {
+  text-decoration: none;
+  font-size: 2rem;
+  &:hover {
+    cursor: pointer;
+    color: $sun;
+  }
+}
+
 #individual-venue {
   margin-bottom: 5%;
 }
 
-.venue {
+img.venue {
   width: 50%;
   display: block;
   margin: 0 auto;
   @media screen and (max-width: 600px) {
-    width: 90%;
+    width: 80%;
   }
 }
 
@@ -108,11 +117,12 @@ p { margin: 1.375rem 0; }
   width: 50px;
   display: block;
   margin: 0 auto;
+  margin-top: 50px;
 	color: $sun;
 	background: none;
 	border-radius: 0;
   text-decoration: none;
-	padding: 1.2em 2em;
+	padding: 1em 1.2em;
 	letter-spacing: 0.2em;
   font-family: 'Montserrat';
 	font-size: 0.7em;
