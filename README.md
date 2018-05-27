@@ -7,7 +7,7 @@ Out Of Office is an who assist users to find their ideal venue to work outside b
 Our audience are freelancers, digital nomads, travelers and dreamers.
 
 ## Description
-The app use Google Maps API to find their location, and FourSquare API to locate the ideal venue to work (based on pre-built lists curated by the 'out of office' developers) and OpenWeather Api to direct the users for indoor or outdoor places based on weather. 
+The app use Google Maps API to find their location, FourSquare API to locate the ideal venue to work (based on pre-built lists curated by the 'out of office' developers) and OpenWeather API to direct the users for indoor or outdoor places based on weather. 
 
 
 ## Usage Instructions
