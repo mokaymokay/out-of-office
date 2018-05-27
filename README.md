@@ -1,4 +1,4 @@
-![alt tag](https://files.slack.com/files-pri/T03JJLPSP-FAVSR8L0Y/image.png "Description goes here")
+![screen shot 2018-05-27 at 12 30 53 pm](https://user-images.githubusercontent.com/18123962/40588325-d88df4b4-61a9-11e8-974a-951c62ff7957.png)
 
 
 Out Of Office
