@@ -24,7 +24,10 @@ The app deployed using Heroko:
 
 ## Authors
 
-* **Kay Mok** - *Initial work* - [PurpleBooth](https://github.com/mokaymokay)
+* **Kay Mok** - [mokaymokay](https://github.com/mokaymokay)
+* **Danyale C. Walker** - [DanyaleCW](https://github.com/DanyaleCW)
+* **Ronen Goren** - [ronengoren](https://github.com/ronengoren)
+
 
 
 ## Screenshots 
