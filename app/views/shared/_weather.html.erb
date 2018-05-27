@@ -1,60 +1,54 @@
 <%= stylesheet_link_tag 'weather' %>
- <h2><%= @neighborhood %></h2>
- <h1>Current weather: <%= @weather["main"]["temp"].round %>&#176</h1>
-  <h1>Today: <%= @weather["main"]["temp_min"].round %>&#176/<%= @weather["main"]["temp_max"].round%>&#176</h1>
-<% case @weather["weather"][0]["description"] %>
-<% when "clear sky"  %>
-<div class="icon sunny">
-  <div class="sun">
-    <div class="rays"></div>
+ <h1><%= @neighborhood %></h1>
+
+<% case @weather["weather"][0]["id"].to_s %>
+<% when "800" %>
+  <div class="icon sunny">
+    <div class="sun">
+      <div class="rays"></div>
+    </div>
   </div>
-</div>
 
-<% when "few clouds"  %>
-
-<div class="icon sun-shower">
-  <div class="cloud"></div>
-  <div class="sun">
-    <div class="rays"></div>
+<% when "801" %>
+  <div class="icon sun-shower">
+    <div class="cloud"></div>
+    <div class="sun">
+      <div class="rays"></div>
+    </div>
+    <div class="rain"></div>
   </div>
-  <div class="rain"></div>
-</div>
-<% when "thunderstorm"  %>
 
-<div class="icon thunder-storm">
-  <div class="cloud"></div>
-  <div class="lightning">
-    <div class="bolt"></div>
-    <div class="bolt"></div>
+<% when /8\d\d/ %>
+  <div class="icon cloudy">
+    <div class="cloud"></div>
+    <div class="cloud"></div>
   </div>
-</div>
 
-<% when "scattered clouds", "broken clouds"  %>
-
-<div class="icon cloudy">
-  <div class="cloud"></div>
-  <div class="cloud"></div>
-</div>
-
-<% when "snow"  %>
-
-<div class="icon flurries">
-  <div class="cloud"></div>
-  <div class="snow">
-    <div class="flake"></div>
-    <div class="flake"></div>
+<% when /2\d\d/ %>
+  <div class="icon thunder-storm">
+    <div class="cloud"></div>
+    <div class="lightning">
+      <div class="bolt"></div>
+      <div class="bolt"></div>
+    </div>
   </div>
-</div>
 
-<% when "shower rain", "rain", "mist"   %>
+<% when /6\d\d/ %>
+  <div class="icon flurries">
+    <div class="cloud"></div>
+    <div class="snow">
+      <div class="flake"></div>
+      <div class="flake"></div>
+    </div>
+  </div>
 
-<div class="icon rainy">
-  <div class="cloud"></div>
-  <div class="rain"></div>
-</div>
-
-<% else %>
-
-<h1>Snow happens, weather you like it or not</h1>
+<% when /5\d\d/ %>
+  <div class="icon rainy">
+    <div class="cloud"></div>
+    <div class="rain"></div>
+  </div>
 
 <% end %>
+
+<h1><%= @weather["main"]["temp"].round %>&#8457</h1>
+<h1>Today: <%= @weather["main"]["temp_min"].round %>&#8457/<%= @weather["main"]["temp_max"].round%>&#8457</h1>

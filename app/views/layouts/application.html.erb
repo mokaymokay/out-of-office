@@ -4,17 +4,12 @@
     <title>out of office</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= favicon_link_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
   </head>
-
   <body>
-      <%= image_tag("ooo-logo", alt: "ooo-logo", class: "ooo-logo") %>
-
+      <a href="<%= root_path %>"><%= image_tag("ooo-logo", alt: "ooo-logo", class: "ooo-logo") %></a>
   <%= yield %>
-
-
   </body>
 </html>

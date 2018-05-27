@@ -12,7 +12,7 @@ body p {
 
 h1 {
     font-family: 'Hammersmith One', sans-serif;
-    margin-bottom: 1.375em;
+    margin-bottom: 0.5em;
     color: #fff;
     font-weight: 100;
     font-size: 2em;
@@ -43,11 +43,11 @@ p {
     margin: 0 auto;
     height: 150px;
     width: 150px;
+    margin-bottom: -30px;
 }
 
 #weather-container {
     max-width: 42em;
-    padding: 2em;
     margin: 0 auto;
     color: $darksky;
     text-align: center;
