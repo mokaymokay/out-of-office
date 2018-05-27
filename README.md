@@ -3,7 +3,7 @@
 
 Out Of Office
 ======================
-Out Of Office is an who assist users to find their ideal venue to work outside based on weather and their location.
+Out Of Office is an app created to assist users to find their ideal venue to work outside based on weather and their location.
 Our audience are freelancers, digital nomads, travelers and dreamers.
 
 ## Description
