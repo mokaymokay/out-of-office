@@ -19,6 +19,8 @@ While the app currently covers the 5 boroughs of NYC, in the future we want to e
 ## Deployment
 
 The app deployed using Heroko:
+[OutOfOffice](https://out-of-office-nyc.herokuapp.com/)
+
 
 ## Authors
 
