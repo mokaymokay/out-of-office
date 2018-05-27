@@ -16,5 +16,4 @@ Every time a user go into the website he needs to allow the use of location and 
 ## Future
 While the app currently covers the 5 boroughs of NYC, in the future we want to expand and be available to more cities and countries. in addition, we believe the 'whole package' contain a display of clothing suggestions images and/or retails where our users can actually buy the right clothing for their weather and location condition.   
 
-
-
+![screen shot 2018-05-27 at 12 30 53 pm](https://user-images.githubusercontent.com/18123962/40588419-1a3ea574-61ab-11e8-883b-0f82824a8801.png)
