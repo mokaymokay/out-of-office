@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+#gallery > p {
+  color: white;
+}
+
 #gallery h1 {
     font-size: 2rem;
     font-family: 'Hammersmith One';
@@ -16,6 +20,7 @@
     text-align: center;
     margin: 2rem 0;
     text-shadow: 2px 2px 2px $gunmetal;
+    color: $sun;
 }
 
 #gallery h2 {
@@ -61,6 +66,10 @@
 .box-icon {
   width: 2em;
   height: 2em;
+}
+
+.inline-icon {
+  vertical-align: middle;
 }
 
 .front,

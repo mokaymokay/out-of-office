@@ -1,6 +1,7 @@
 <%= stylesheet_link_tag 'boxes' %>
-
 <div id="gallery">
+	<h1>Our Recommendations:</h1>
+	<p>Pro Tip: Places with <%= image_tag "sun-icon", class: "box-icon inline-icon" %> have outdoor seating.</p>
 	<div class="wrapper">
 		<div class="cols">
 			 <% @places.each do |p| %>
