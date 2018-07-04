@@ -22,7 +22,6 @@ function initMap() {
             },
                 function(res, status) {
                     if (status == 'OK') {
-                        console.log(res);
                         let zip = res[0].formatted_address.match(/,\s\w{2}\s(\d{5})/);
                         let neighborhood = res[2].address_components[0]['short_name'];
                         getZipCodeAndNeighborhood(zip[1], neighborhood);
@@ -30,7 +29,7 @@ function initMap() {
                 }
             );
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Are you here?');
+            infoWindow.setContent('Current location');
             infoWindow.open(map);
             map.setCenter(pos);
         }, function() {
