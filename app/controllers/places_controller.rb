@@ -5,22 +5,12 @@ class PlacesController < ApplicationController
 
   def create
     @zip_code = params[:user][:zip_code]
-    puts @zip_code
     weather_object = Weather.new(@zip_code)
     @weather = weather_object.get_weather()
-    puts @weather["weather"][0]["id"]
     @places = Neighborhood.find_by("'#{@zip_code}' = ANY (neighborhoods.zip_code)").places
     @neighborhood = params[:user][:neighborhood]
     current_temp = @weather["main"]["temp"]
-    if current_temp >= 80
-      temp_feels = "outdoor"
-    elsif current_temp < 80 && current_temp >= 70
-      temp_feels = "warm"
-    elsif current_temp < 60
-      temp_feels = "cold"
-    else
-      temp_feels = "meh"
-    end
+    temp_feels = PlacesHelper.determine_pleasantness(current_temp)
     non_clothing_advices = Advice.where({category: "non-clothing", weather_category: temp_feels})
     @non_clothing_advice = non_clothing_advices[rand(non_clothing_advices.length)]
     clothing_advices = Advice.where({category: "clothing", weather_category: temp_feels})
