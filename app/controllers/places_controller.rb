@@ -7,7 +7,7 @@ class PlacesController < ApplicationController
     @zip_code = params[:user][:zip_code]
     weather_object = Weather.new(@zip_code)
     @weather = weather_object.get_weather()
-    @places = Neighborhood.find_by("'#{@zip_code}' = ANY (neighborhoods.zip_code)").places
+    @places = Neighborhood.find_by("'#{@zip_code}' = ANY (neighborhoods.zip_code)").places.limit(9)
     @neighborhood = params[:user][:neighborhood]
     current_temp = @weather["main"]["temp"]
     temp_feels = PlacesHelper.determine_pleasantness(current_temp)
